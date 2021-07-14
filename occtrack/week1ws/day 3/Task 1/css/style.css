@@ -1,0 +1,40 @@
+table{
+    border: 1px solid black;
+    border-spacing: 2px;
+    border-collapse: collapse;
+}
+
+tr, th{
+    padding: 8px 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: azure;
+}
+
+.c1{
+    background-color: bisque;
+}
+
+.c2{
+    background-color: cornsilk;
+}
+
+.b{
+    border-width: 0px 3px;
+}
+
+#bt{
+    border-width: 3px 3px 0 3px;
+}
+
+#bb{
+    border-width: 0 3px 3px 3px;
+}

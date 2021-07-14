@@ -1,0 +1,91 @@
+@font-face {
+    font-family: myfont;
+    src: url("../font/Pacifico-Regular.ttf");
+}
+@font-face {
+    font-family: todo;
+    src: url("../font/Caveat-VariableFont_wght.ttf");
+}
+
+body{
+    background-image: linear-gradient(to bottom left, #0b406d, #09548a, #0d4d84, #0764a5) ;
+    font-family: myfont;
+    background-repeat: no-repeat;
+}
+
+.container{
+    padding-bottom: 30%;
+    margin: 3% 40% 3% 40%;
+    background-image: linear-gradient(to bottom right, #ff0586, #cc2179, #f08bbf) ;
+    box-sizing: border-box;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+header{
+    text-align: center;
+    font-family: myfont;
+    font-size: 40px;
+    font-style: italic;
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    background-image: linear-gradient
+    (to bottom right, #0b406d, #09548a, #84dd8f) ;
+    text-shadow: 5px 2px 2px black;
+    border-radius: 15px;
+
+}
+
+#inputText{
+    text-align: center;
+    padding: 20px;
+    width: 55%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+
+
+    background-image: linear-gradient(to bottom right, #0b406d, #09548a, #84dd8f);
+}
+
+#push{
+    background-image: linear-gradient(to bottom right, #ff0586, #cc2179, #f08bbf) ;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.done{
+    text-decoration: line-through;
+    text-decoration-color: greenyellow;
+    text-decoration-thickness: 2px;
+}
+
+#tasks{
+    margin: auto;
+    font-size: 30px;
+    font-family: todo;
+    font-weight: 900;
+    color: #930b03;
+    text-shadow: 2px 1px 4px white;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: palevioletred;
+}
+
+
+
+.delete{
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right, #0b406d, #09548a, #84dd8f);
+    
+}

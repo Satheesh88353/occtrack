@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background:linear-gradient(to bottom right, blue, #ffff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+checkbox{
+    padding: 50px;
+}
+
+.container{
+    background: linear-gradient(to top left, lightgreen, white );
+    box-shadow: black 0Spx 5px 15px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.header{
+    color:darkblue;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: cornflowerblue;
+}
+
+.form{
+    padding: 30px;
+}
+
+.form-group{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;    
+}
+
+form input::placeholder{
+    color: rgb(27, 114, 117);
+}
+
+ 
+.form-group span{
+    font-weight: bolder;
+    font-size: 15px;
+    font-style: italic;
+    visibility: visible;
+    color: red;
+
+}
+
+/* .form-group.success input{
+    border-color: rgb(0, 255, 0);
+} */
+
+/* .form-group input{
+    border-color: rgb(255, 0, 0);
+} */
+
+/* .form-group.error span{
+    border-color: rgb(255, 0, 0);
+    visibility: visible;
+} */
+
+form #submit{
+    background-image: linear-gradient(to bottom right, white, skyblue, blue);
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.form-group #submit:hover{
+    background-image: linear-gradient(to bottom right lightpink, white);
+}

@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+}
+header{
+    display: flex;
+    background-color: #ffffff;
+}
+
+.head{
+    font-size: 80px;
+    width: 95%;
+    padding: 5%;
+}
+
+.logo{
+    padding-top: 5px;
+    float: right;    
+}
+
+.video_con{
+    background-color: #cdcdcc;
+    display: flex;
+}
+.video{
+    padding: 4%;
+
+}
+.logo_img{
+    background-color: #c13933;
+    justify-content: space-evenly;
+    padding: 6%;
+    padding-right: 0%;
+}
+
+.fix{
+    display: flex;
+    justify-content: space-evenly;  
+}

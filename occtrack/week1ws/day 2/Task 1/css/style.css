@@ -1,0 +1,34 @@
+body{
+    margin: 5% 12%;
+    text-align: justify;
+    line-height: 25Px;
+}
+
+.sender{
+    text-align: right;
+    font-style: italic;
+}
+
+.sender_name{
+    font-weight: bolder;   
+}
+
+.date{
+    font-style: normal;
+}
+
+.receiver{
+    text-align: left;
+}
+
+.receiver_name{
+    font-weight: bolder;   
+}
+
+.mar{
+    padding-left: 5%;
+}
+
+.author{
+    font-style: italic;
+}
