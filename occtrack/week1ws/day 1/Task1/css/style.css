@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0px;
+}
+body {
+  font-family: cursive;
+  background-color: #1a1a1d;
+}
+header {
+  background: linear-gradient(to bottom right, #c3073f, #950740, #6f2232);
+  padding: 1px;
+}
+header h1 {
+  text-align: center;
+  font-size: 70px;
+  color: white;
+}
+button {
+  color: white;
+  background-color: #4e4e50;
+  border: 3px solid #1a1a1d;
+  border-radius: 5px;
+}
+button:hover {
+  color: tomato;
+}
+nav {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav button {
+  width: 150%;
+  padding: 7%;
+}
+.search {
+  padding: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+.search input {
+  border: 3px solid #1a1a1d;
+  width: 50%;
+  border-radius: 5px;
+
+}
+.search button {
+  width: 20%;
+  border: 3px solid #1a1a1d;
+}
+.baner {
+  margin-top: 2px;
+}
+
+.head h1 {
+  padding: 10px;
+  color: tomato;
+  font-family: cursive;
+}
+.article {
+  text-align: justify;
+  padding: 5px 25px;
+}
+.head {
+  background-color: whitesmoke;
+  margin: 10px 0px 10px 10px;
+  padding-bottom: 20px;
+}
+
+.sidebar2 {
+  margin-top: 10px;
+}
+.foodmenu {
+  margin-left: 10px;
+}
+
+/* Product page */
+.hr {
+  background-color: white;
+}
+#meals {
+  margin-top: 20px;
+}
+aside img {
+  width: 100%;
+  height: 170vh;
+}
+.figure img {
+  width: 190px;
+  height: 190px;
+}
+.figure-caption {
+  padding: 10px;
+  color: #ffff !important;
+}
+
+footer {
+  margin-top: 1px;
+  text-align: center;
+  padding: 20px;
+  color: #1a1a1d;
+  background: linear-gradient(to bottom right, #c3073f, #950740, #6f2232);
+}
+
+/* form */
+.formBodysignup {
+  background-color: #1a1a1d;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+.container1 {
+  background-color: rgb(216, 214, 214);
+  box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+  width: 500px;
+}
+.formHeader {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  background: linear-gradient(to bottom right, #c3073f, #950740, #6f2232);
+  padding: 20px 100px;
+  border-bottom: 2px solid #494848;
+}
+.formHeader h2 {
+  font-size: 20px;
+}
+.form {
+  padding: 30px 40px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 10px;
+}
+
+.form input::placeholder {
+  color: #1a1a1d;
+}
+
+.form #submit {
+  background-color: #1a1a1d;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.form #submit:hover {
+  background-color: #4e4e50;
+  color: tomato;
+}
+
+.alreadyaccount {
+  margin-left: 25%;
+  color: #1a1a1d;
+}
+.formBodylogin {
+  background-color: #1a1a1d;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+.newaccount {
+  margin-left: 35%;
+  color: #1a1a1d;
+}
