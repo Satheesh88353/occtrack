@@ -1,0 +1,199 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Js</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <!-- <script src="index.js"></script> -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+      }
+      .slides {
+        display: flex;
+        height: 100%;
+      }
+      .slide {
+        min-width: 100%;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .buttons {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      button {
+        font-size: 40px;
+        color: white;
+        background: none;
+        border: none;
+        outline: none;
+      }
+      .radio {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slides">
+        <div class="slide" id="lastClone">
+          <img
+            src="https://www.iamabiker.com/wp-content/uploads/2015/04/Pulsar-RS-200-review-looks-feel-and-build-quality.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://automobilians.com/wp-content/uploads/2015/03/Bajaj-Pulsar-RS-200-Launch-Automobilians-10.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slide">
+          <img src="https://cdn.wallpapersafari.com/21/67/IgsfvS.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img
+            src="https://www.bikes4sale.in/pictures/default/bajaj-pulsar-rs-200/bajaj-pulsar-rs-200-pic-36.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://park.shifting-gears.com/wp-content/uploads/2015/03/2015-bajaj-pulsar-rs200-141.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://www.iamabiker.com/wp-content/uploads/2015/04/Pulsar-RS-200-review-looks-feel-and-build-quality.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slide" id="firstClone">
+          <img
+            src="https://automobilians.com/wp-content/uploads/2015/03/Bajaj-Pulsar-RS-200-Launch-Automobilians-10.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><i class="fas fa-angle-left"></i></button>
+        <button id="next"><i class="fas fa-angle-right"></i></button>
+      </div>
+      <div class="radio">
+        <input type="radio" name="Carousel" value="1" />
+        <input type="radio" name="Carousel" value="2" />
+        <input type="radio" name="Carousel" value="3" />
+        <input type="radio" name="Carousel" value="4" />
+        <input type="radio" name="Carousel" value="5" />
+      </div>
+    </div>
+  </body>
+  <script>
+    const container = document.querySelector(".container");
+    const slides = document.querySelector(".slides");
+    const next = document.getElementById("next");
+    const prev = document.getElementById("prev");
+    let slideId;
+    const radio = document.querySelector(".radio");
+
+    let slide = document.querySelectorAll(".slide");
+    let index = 1;
+    let i;
+    var inp = document.getElementsByName("Carousel");
+    console.log(inp[0].value);
+
+    // const firstClone = slide[0].cloneNode(true);
+    // const lastClone = slide[slide.length - 1].clonenode(true);
+
+    // document.getElementById("slides").appendChild(firstClone);
+
+    // firstClone.id = "first-clone";
+    // lastClone.id = "last-clone";
+
+    // slides.append(firstClone);
+    // slides.prepend(lastClone);
+
+    const slideWidth = slide[index].clientWidth;
+    slides.style.transform = "translateX(" + -slideWidth * index + "px)";
+
+    const getSlides = () => document.getElementsByClassName("slide");
+
+    function startSlide() {
+      var inp = document.getElementsByName("Carousel");
+      slideId = setInterval(() => {
+        // for (i = 0; i < slide.length; i++) {
+        //   if (inp[i].value == slide[index]) {
+        //     inp[i].checked = true;
+        //   }
+        // }
+        index++;
+        slides.style.transform = "translateX(" + -slideWidth * index + "px)";
+        slides.style.transition = "0.7s";
+      }, 3000);
+    }
+
+    slides.addEventListener("transitionend", () => {
+      slide = getSlides();
+      if (slide[index].id == "firstClone") {
+        slides.style.transition = "none";
+        index = 1;
+        slides.style.transform = "translateX(" + -slideWidth * index + "px)";
+      }
+      if (slide[index].id == "lastClone") {
+        slides.style.transition = "none";
+        index = slide.length - 2;
+        slides.style.transform = "translateX(" + -slideWidth * index + "px)";
+      }
+    });
+
+    function moveToNextSlide() {
+      slide = getSlides();
+      index++;
+      slides.style.transform = "translateX(" + -slideWidth * index + "px)";
+      slides.style.transition = "0.7s";
+    }
+    function moveToPrevSlide() {
+      slide = getSlides();
+      if (index >= slide.length - 1) return;
+      index--;
+      slides.style.transform = "translateX(" + -slideWidth * index + "px)";
+      slides.style.transition = "0.7s";
+    }
+
+    container.addEventListener("mouseenter", () => {
+      clearInterval(slideId);
+    });
+    container.addEventListener("mouseleave", startSlide);
+    next.addEventListener("click", moveToNextSlide);
+    prev.addEventListener("click", moveToPrevSlide);
+
+    startSlide();
+  </script>
+</html>
