@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+    padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3vw;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, #7dd570, #29b484);
+    -webkit-background-clip: text;
+}
+
+.menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 8%;
+    right: 3%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards {
+    width: 20%;
+    height: 60vh;
+    perspective: 500px;
+}
+
+.rotate {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.fc1 {
+    background-color: #ffffff;
+    color: #464646;
+    transform: rotateY(0);
+}
+
+.bc1 {
+    background-image: linear-gradient(to right, #ffaf07, #ff921c);
+    color: #464646;
+    transform: rotateY(180deg);
+    padding: 25% 10%;
+}
+
+.cards:hover .rotate {
+    transform: rotateY(180deg);
+}
+
+.img {
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    overflow: hidden;
+    background-color: #ff921c;
+}
+
+.tour {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: relative;
+}
+
+.b1,
+.b2 {
+    display: block;
+    padding: 2%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.b1 {
+    width: 40%;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    background-image: linear-gradient(to right, rgba(255, 176, 15, 0.9), rgba(255, 146, 36, 0.9));
+}
+
+.b2 {
+    width: 45%;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    background-image: linear-gradient(to right, rgba(255, 176, 15, 0.9), rgba(255, 146, 36, 0.9));
+}
+
+.package {
+    text-align: center;
+    font-size: 1vw;
+    color: #727272;
+    line-height: 25px;
+}
+
+hr {
+    width: 60%;
+}
+
+.back p {
+    text-align: center;
+    font-size: 1.5vw;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.back>span {
+    display: block;
+    font-size: 3.5vw;
+    text-align: center;
+    color: #ffffff;
+    margin: 15% 0%;
+}
+
+.back button {
+    background-color: #f7f7f7;
+    color: #464646;
+    font-size: 1vw;
+    width: 40%;
+    height: 5vh;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin: 20% 30%;
+}
+
+.fc2 {
+    background-color: #ffffff;
+    color: #464646;
+    transform: rotateY(0);
+}
+
+.bc2 {
+    background-image: linear-gradient(to right bottom, #7bd470, #2bb584);
+    color: #464646;
+    transform: rotateY(180deg);
+    padding: 25% 10%;
+}
+
+.img2 {
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    overflow: hidden;
+    background-color: #6dcd7e;
+}
+
+.b1c2 {
+    width: 40%;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    background-image: linear-gradient(to right, rgba(119, 210, 122, 0.9), rgba(75, 193, 124, 0.9));
+}
+
+.b2c2 {
+    width: 45%;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    background-image: linear-gradient(to right, rgba(119, 210, 122, 0.9), rgba(75, 193, 124, 0.9));
+}
+
+.fc3 {
+    background-color: #ffffff;
+    color: #464646;
+    transform: rotateY(0);
+}
+
+.bc3 {
+    background-image: linear-gradient(to right, #2a95ff, #5446fa);
+    color: #464646;
+    transform: rotateY(180deg);
+    padding: 25% 10%;
+}
+
+.img3 {
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    overflow: hidden;
+    background-color: #7aaefe;
+}
+
+.b1c3 {
+    width: 40%;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    background-image: linear-gradient(to right, rgba(63, 152, 255, 0.9), rgba(109, 100, 251, 0.9));
+}
+
+.b2c3 {
+    width: 45%;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    background-image: linear-gradient(to right, rgba(63, 152, 255, 0.9), rgba(109, 100, 251, 0.9));
+}
+
+.footer {
+    width: 20%;
+    margin: 5% 40% 0% 40%;
+}
+
+.foo {
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 4%;
+    color: #ffffff;
+    background-color: #55c57a;
+    font-size: 1vw;
+    text-transform: uppercase;
+}

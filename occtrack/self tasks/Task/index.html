@@ -1,0 +1,145 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SK SpaceX</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" href="images/icon.png" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img src="images/spacex.png" alt="" />
+      </div>
+      <div class="nav">
+        <div><a href="falcon.htm">Falcon 9</a></div>
+        <div><a href="#">Falcon Heavy</a></div>
+        <div><a href="#">Dragon</a></div>
+        <div><a href="#">Starship</a></div>
+        <div><a href="#">Human Spaceflight</a></div>
+        <div><a href="#">Rideshare</a></div>
+      </div>
+      <div class="others">
+        <div><a href="#">Shop</a></div>
+        <nav role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <a href="index.html"><li>Home</li></a>
+              <a href="#"><li>About</li></a>
+              <a href="#"><li>Info</li></a>
+              <a href="#"><li>Contact</li></a>
+              <a href="https://erikterwan.com/" target="_blank"
+                ><li>Show me more</li></a
+              >
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="main-img">
+        <img src="images/carousel1.jpg" alt="" />
+        <div class="img-text">
+          <span>UPCOMING TEST</span>
+          <p>STARSHIP HIGH-ALTITUDE FLIGHT TEST</p>
+          <button>Watch</button>
+        </div>
+      </div>
+      <div class="main-img">
+        <img src="images/carousel2.jpg" alt="" />
+        <div class="img-text">
+          <span>RECENT LAUNCH </span>
+          <p>CRS-21 MISSION</p>
+          <button>Watch</button>
+        </div>
+      </div>
+      <div class="main-img">
+        <img src="images/carousel3.jpg" alt="" />
+        <div class="img-text">
+          <span style="color: black"
+            >Watch the Crew-1 mission from the beginning.</span
+          >
+          <p>CREW-1 MISSION</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div class="main-img">
+        <img src="images/p1.jpeg" alt="" />
+        <div class="img-text">
+          <span style="font-weight: lighter"
+            >Dragon is designed to autonomously dock and undock with the
+            International Space Station. However, the crew can take manual
+            control of the spacecraft if necessary.</span
+          >
+          <p>DRAGON DOCKING SIMULATOR</p>
+          <button>Try Now</button>
+        </div>
+      </div>
+      <div class="main-img">
+        <img src="images/p2.jfif" alt="" />
+        <div class="img-text">
+          <span style="font-weight: lighter"
+            >STARSHIP SpaceX vehicle Starship is SpaceX’s fully reusable
+            transportation system designed to carry both crew and cargo to the
+            Earth’s orbit, the Moon, Mars, and beyond.</span
+          >
+          <p>STARSHIP</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div class="main-img">
+        <img src="images/p3.jpg" alt="" />
+        <div class="img-text">
+          <span style="font-weight: lighter"
+            >NASA selected SpaceX to develop a lunar optimized Starship to
+            transport crew between lunar orbit and the surface of the Moon as
+            part of NASA’s Artemis program.</span
+          >
+          <p>NASA SELECTS LUNAR OPTIMIZED STARSHIP</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="copy" style="font-weight: lighter; color: #999999">
+        SpaceX &#169; 2020
+      </div>
+      <div><a href="">Youtube</a></div>
+      <div><a href="">Instagram</a></div>
+      <div><a href="">Twitter</a></div>
+      <div><a href="">Facebook</a></div>
+      <div><a href="">Linkedin</a></div>
+      <div><a href="">Privacy policy</a></div>
+    </footer>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("section").click(function () {
+        $("div:eq(0)").toggleClass("aktif1");
+        $("div:eq(2)").toggleClass("aktif2");
+        $("div:eq(1)").toggleClass("aktif3");
+        if ($(window).width() > 768) {
+          $("div#content").toggle(
+            "slide",
+            {
+              direction: "top",
+            },
+            500
+          );
+        } else {
+          $("div#content").slideToggle();
+        }
+      });
+    });
+  </script>
+</html>
